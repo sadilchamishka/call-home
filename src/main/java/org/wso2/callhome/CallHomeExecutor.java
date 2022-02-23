@@ -17,8 +17,8 @@
  */
 package org.wso2.callhome;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.wso2.callhome.core.CallHome;
 import org.wso2.callhome.core.DataHolder;
 import org.wso2.callhome.utils.CallHomeInfo;
@@ -36,7 +36,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class CallHomeExecutor {
 
-    private static final Log log = LogFactory.getLog(CallHomeExecutor.class);
+    private static final Logger log = LogManager.getLogger(CallHomeExecutor.class);
     private static final int CALL_HOME_TIMEOUT_SECONDS = 180;
     private static final int LINE_LENGTH = 80;
     public static final String CARBON_AUTO_UPDATE_CHECK = "carbon.auto.update.check";

@@ -17,8 +17,8 @@
  */
 package org.wso2.callhome.core;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -60,7 +60,7 @@ import static java.lang.System.getProperty;
  */
 public class CallHome implements Callable<String> {
 
-    private static final Log log = LogFactory.getLog(CallHome.class);
+    private static final Logger log = LogManager.getLogger(CallHome.class);
     private static final String OS_NAME = "os.name";
     private static final String CALL_HOME_WUM_ENDPOINT = "https://api.updates.wso2.com/call-home/v1.0.0/check-updates";
     private static final String CALL_HOME_UPDATES2_ENDPOINT =

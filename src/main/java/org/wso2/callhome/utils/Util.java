@@ -18,8 +18,8 @@
 package org.wso2.callhome.utils;
 
 import com.google.gson.Gson;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.wso2.callhome.exception.UtilException;
 import org.wso2.callhome.model.UpdateConfig;
 import org.yaml.snakeyaml.Yaml;
@@ -45,7 +45,7 @@ import java.util.Map;
  */
 public class Util {
 
-    private static final Log log = LogFactory.getLog(Util.class);
+    private static final Logger log = LogManager.getLogger(Util.class);
     private static final String FULL = "full";
     private static final String UNKNOWN = "unknown";
     private static final String UPDATE = "_update";
